@@ -4,7 +4,7 @@ COPY package.json /opt/neko/
 COPY package-lock.json /opt/neko/
 
 WORKDIR /opt/neko
-RUN npm ci --no-dev
+RUN npm ci --omit=dev
 
 COPY src /opt/neko/src
 RUN npm run-script build
