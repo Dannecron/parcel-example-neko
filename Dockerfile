@@ -9,7 +9,7 @@ RUN npm ci --omit=dev
 COPY src /opt/neko/src
 RUN npm run-script build
 
-FROM nginx:1.23.2 as runtume
+FROM nginx:1.23.4 as runtume
 
 COPY ./nginx/templates /etc/nginx/templates
 COPY --from=build /opt/neko/dist /opt/neko/dist
