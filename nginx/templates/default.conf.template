@@ -14,4 +14,9 @@ server {
        root   /opt/neko/dist;
        index  index.html;
      }
+
+     location /version {
+        default_type application/json;
+        return 200 '{"version": "$APP_VERSION"}';
+     }
 }
