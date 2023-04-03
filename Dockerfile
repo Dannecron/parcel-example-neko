@@ -11,5 +11,7 @@ RUN npm run-script build
 
 FROM nginx:1.23.2 as runtume
 
+ENV APP_VERSION=latest
+
 COPY ./nginx/templates /etc/nginx/templates
 COPY --from=build /opt/neko/dist /opt/neko/dist
