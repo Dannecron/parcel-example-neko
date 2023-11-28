@@ -1,3 +1,6 @@
+import '@gravity-ui/uikit/styles/fonts.css';
+import '@gravity-ui/uikit/styles/styles.css';
+
 import { createRoot } from "react-dom/client";
 
 import Nekos from './Nekos';

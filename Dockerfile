@@ -9,7 +9,7 @@ RUN npm ci --omit=dev
 COPY src /opt/neko/src
 RUN npm run-script build
 
-FROM nginx:1.23.2 as runtume
+FROM nginx:1.23.2 as runtime
 
 ENV APP_VERSION=latest
 
